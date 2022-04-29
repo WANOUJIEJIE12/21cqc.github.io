@@ -1,0 +1,564 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>comic</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		background-color:#e5e5e5;
+	}
+	.top {
+	    height:300px;
+	    background: red;
+		background: -webkit-linear-gradient(to top,#e5e5e5, red);  
+		background: linear-gradient(to top,#e5e5e5,red); 
+	    text-align: center;
+	}
+	.top p {
+		font-size: 45px;
+		color: #1a2933;
+	}
+	.top a img {
+		height: 4rem;
+		margin-top: 1.2rem;
+	}
+	.top i {
+		margin-left: -20px;
+	}
+	.main{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-top: -150px;
+	}
+	.card{
+	    width: 300px;
+		padding: 28px;
+		text-align: center;
+		
+	}
+	
+	.pic{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.img img{
+		width: 15.6rem;
+		height: 25rem;
+		box-shadow: 3px 5px 8px orangered;
+	}
+	
+	.del{
+		width: 15.7rem;
+		height: 25.2rem;
+		background: rgba(255,255,255,0.3);
+		backdrop-filter: blur(6px);
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		display: none;
+	}
+	.pic:hover .del{
+		width: 15.7rem;
+		height: 25.2rem;
+		background: rgba(255,255,255,0.3);
+		backdrop-filter: blur(6px);
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		display: block;
+		animation: slide-top 1s;
+	}
+	.menu{
+		width: 100%;
+		height: 100%;
+		backdrop-filter: blur(6px);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	@keyframes slide-top {
+	    0% {
+	        opacity:0;
+	        transform: translateY(-100%)
+	    }
+	
+	    100% {
+	        opacity: 1;
+	        transform: translateY(0%)
+	    }
+	}
+	
+	ul li{
+		list-style-type: none;
+		text-align: center;
+		font-size: 32px;
+		color:#23607e;
+		width: 15.5rem;
+		height: 45px;
+	}
+	
+	ul li:hover{
+	    cursor:pointer;
+		background: rgba(0,0,0,0.1);
+		width: 15.5rem;
+		height: 45px;
+		border-radius: 6px;
+	}
+	
+	p{
+		color: #23607e;
+        overflow: hidden; 
+        text-overflow:ellipsis;
+        white-space: nowrap;
+	}
+	
+	a{
+		text-decoration: none;
+		color: #23607E;
+	}
+	
+	button{
+		position: absolute;
+		z-index: 2;
+		float: right;
+	}
+
+	@media screen and (max-width:720px){
+	    .card{
+			width: 96%;
+			height: auto;
+			float: left;
+			padding: 2px;
+			display: flex;
+			background: rgba(255,255,255,0.9);
+			margin: 4px 0 0 0;
+			border-radius: 8px;
+		}
+		.pic{
+			width: 100%;
+			height: 120px;
+			display: block;
+		}
+		.img{
+			float: left;
+			padding: 5px;
+		}
+		.pic img{
+			float: left;
+			width: 75px;
+			height: 110px;
+			margin-left: 6px;
+		}
+		.card p{
+			width: 100%;
+			text-align: initial;
+			padding-top: 35px;
+			margin-left: 10px;
+			font-size: 20px;
+			overflow: hidden;
+			text-overflow:ellipsis;
+			white-space: nowrap;
+		}
+		.del{
+			width: 96%;
+			height: 116px;
+			background: rgba(255,255,255,0.008);
+			backdrop-filter: blur(6px);
+			position: absolute;
+		}
+		.card:hover .del{
+		    cursor:pointer;
+			width: 96%;
+			height: 116px;
+			background: rgba(255,255,255,0.01);
+			backdrop-filter: blur(6px);
+			position: absolute;
+			margin-top: 2px;
+			border-radius: 8px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			display: block;
+			animation: slide-top 1s;
+		}
+		ul li{
+		    cursor:pointer;
+			list-style-type: none;
+			text-align: center;
+			font-size: 15px;
+			padding-top: 7px;
+			color: #23607E;
+			width: 300px;
+			height: 28px;
+			display: block;
+		}
+		
+		ul li:hover{
+			background: rgba(0,0,0,0.12);
+			width: 300px;
+			height: 28px;
+			border-radius: 6px;
+		}
+	}
+</style>
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "#";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+</head>
+
+<body>
+	<div class="top">
+		<p>
+			<a href='#'><img src>
+		</a><i>热烈庆祝中国共产党建党100周年</i>
+		<p>庆祝“五四运动”</P>
+		</p>	</div>
+	<div class="main">
+<div class="card">
+	<div class="pic">
+		<div class="del">
+			<div class="menu">
+				<ul>
+					<li onclick='btn("1")'>阅读</li>	
+					<li onclick='del("1")'>删除</li>
+					<li><a href="#">上传</a></li>
+				</ul>
+			</div>
+			<form name="frm" id="id" action="comics.php" method="get">
+				<input type="hidden" name="comic" id="fileId" >
+			</form>
+			<form name="frm_del" id="id_del" action="comics.php" method="post">
+				<input type="hidden" name="comic_del" id="fileId_del" >
+			</form>
+			
+			<script type="text/javascript">
+				function btn(e){
+					document.getElementById("fileId").value = e;
+					var frm = document.getElementById("id");
+					frm.submit();
+				}
+				
+				function del(e){
+					document.getElementById("fileId_del").value = e;
+					var frm = document.getElementById("id_del");
+					frm.submit();
+				}
+			</script>
+		</div>
+		<a href='#'><div class='img'><img src="01.png""></div></a>	</div>
+	<p>
+		中国共产党创立之初	</p>
+</div>
+	
+<div class="card">
+	<div class="pic">
+		<div class="del">
+			<div class="menu">
+				<ul>
+					<li onclick='btn("2")'>阅读</li>			
+					<li onclick='del("2")'>删除</li>			
+					<li><a href=".#">上传</a></li>
+				</ul>
+			</div>
+			<form name="frm" id="id" action="comics.php" method="get">
+				<input type="hidden" name="comic" id="fileId" >
+			</form>
+			<form name="frm_del" id="id_del" action="comics.php" method="post">
+				<input type="hidden" name="comic_del" id="fileId_del" >
+			</form>
+			
+			<script type="text/javascript">
+				function btn(e){
+					document.getElementById("fileId").value = e;
+					var frm = document.getElementById("id");
+					frm.submit();
+				}
+				
+				function del(e){
+					document.getElementById("fileId_del").value = e;
+					var frm = document.getElementById("id_del");
+					frm.submit();
+				}
+			</script>
+		</div>
+		<a href='#'><div class='img'><img src="02.png"></div></a>	</div>
+	<p>
+		大革命时期</p>
+</div>
+	
+<div class="card">
+	<div class="pic">
+		<div class="del">
+			<div class="menu">
+				<ul>
+					<li onclick='btn("3")'>阅读</li>			
+					<li onclick='del("3")'>删除</li>			
+					<li><a href="#">上传</a></li>
+				</ul>
+			</div>
+			<form name="frm" id="id" action="comics.php" method="get">
+				<input type="hidden" name="comic" id="fileId" >
+			</form>
+			<form name="frm_del" id="id_del" action="comics.php" method="post">
+				<input type="hidden" name="comic_del" id="fileId_del" >
+			</form>
+			
+			<script type="text/javascript">
+				function btn(e){
+					document.getElementById("fileId").value = e;
+					var frm = document.getElementById("id");
+					frm.submit();
+				}
+				
+				function del(e){
+					document.getElementById("fileId_del").value = e;
+					var frm = document.getElementById("id_del");
+					frm.submit();
+				}
+			</script>
+		</div>
+		<a href='#'><div class='img'><img src="03.png"></div></a>	</div>
+	<p>
+		土地改革时期	</p>
+</div>
+	
+<div class="card">
+	<div class="pic">
+		<div class="del">
+			<div class="menu">
+				<ul>
+					<li onclick='btn("4")'>阅读</li>			
+					<li onclick='del("4")'>删除</li>			
+					<li><a href="#">上传</a></li>
+				</ul>
+			</div>
+			<form name="frm" id="id" action="comics.php" method="get">
+				<input type="hidden" name="comic" id="fileId" >
+			</form>
+			<form name="frm_del" id="id_del" action="comics.php" method="post">
+				<input type="hidden" name="comic_del" id="fileId_del" >
+			</form>
+			
+			<script type="text/javascript">
+				function btn(e){
+					document.getElementById("fileId").value = e;
+					var frm = document.getElementById("id");
+					frm.submit();
+				}
+				
+				function del(e){
+					document.getElementById("fileId_del").value = e;
+					var frm = document.getElementById("id_del");
+					frm.submit();
+				}
+			</script>
+		</div>
+		<a href='#'><div class='img'><img src="04.png"></div></a>	</div>
+	<p>
+		全民抗战时期	</p>
+</div>
+	
+<div class="card">
+	<div class="pic">
+		<div class="del">
+			<div class="menu">
+				<ul>
+					<li onclick='btn("5")'>阅读</li>			
+					<li onclick='del("5")'>删除</li>			
+					<li><a href="#">上传</a></li>
+				</ul>
+			</div>
+			<form name="frm" id="id" action="comics.php" method="get">
+				<input type="hidden" name="comic" id="fileId" >
+			</form>
+			<form name="frm_del" id="id_del" action="comics.php" method="post">
+				<input type="hidden" name="comic_del" id="fileId_del" >
+			</form>
+			
+			<script type="text/javascript">
+				function btn(e){
+					document.getElementById("fileId").value = e;
+					var frm = document.getElementById("id");
+					frm.submit();
+				}
+				
+				function del(e){
+					document.getElementById("fileId_del").value = e;
+					var frm = document.getElementById("id_del");
+					frm.submit();
+				}
+			</script>
+		</div>
+		<a href='#'><div class='img'><img src="05.png"></div></a>	</div>
+	<p>
+		解放战争时期	</p>
+</div>
+	
+<div class="card">
+	<div class="pic">
+		<div class="del">
+			<div class="menu">
+				<ul>
+					<li onclick='btn("6")'>阅读</li>			
+					<li onclick='del("6")'>删除</li>			
+					<li><a href="#l">上传</a></li>
+				</ul>
+			</div>
+			<form name="frm" id="id" action="comics.php" method="get">
+				<input type="hidden" name="comic" id="fileId" >
+			</form>
+			<form name="frm_del" id="id_del" action="comics.php" method="post">
+				<input type="hidden" name="comic_del" id="fileId_del" >
+			</form>
+			
+			<script type="text/javascript">
+				function btn(e){
+					document.getElementById("fileId").value = e;
+					var frm = document.getElementById("id");
+					frm.submit();
+				}
+				
+				function del(e){
+					document.getElementById("fileId_del").value = e;
+					var frm = document.getElementById("id_del");
+					frm.submit();
+				}
+			</script>
+		</div>
+		<a href='#'><div class='img'><img src="06.png"></div></a>	</div>
+	<p>
+		社会主义制度初期	</p>
+</div>
+	
+<div class="card">
+	<div class="pic">
+		<div class="del">
+			<div class="menu">
+				<ul>
+					<li onclick='btn("7")'>阅读</li>			
+					<li onclick='del("7")'>删除</li>			
+					<li><a href="#">上传</a></li>
+				</ul>
+			</div>
+			<form name="frm" id="id" action="comics.php" method="get">
+				<input type="hidden" name="comic" id="fileId" >
+			</form>
+			<form name="frm_del" id="id_del" action="comics.php" method="post">
+				<input type="hidden" name="comic_del" id="fileId_del" >
+			</form>
+			
+			<script type="text/javascript">
+				function btn(e){
+					document.getElementById("fileId").value = e;
+					var frm = document.getElementById("id");
+					frm.submit();
+				}
+				
+				function del(e){
+					document.getElementById("fileId_del").value = e;
+					var frm = document.getElementById("id_del");
+					frm.submit();
+				}
+			</script>
+		</div>
+		<a href='#'><div class='img'><img src="07.png"></div></a>	</div>
+	<p>
+		十年动荡时期	</p>
+</div>
+	
+<div class="card">
+	<div class="pic">
+		<div class="del">
+			<div class="menu">
+				<ul>
+					<li onclick='btn("8")'>阅读</li>			
+					<li onclick='del("8")'>删除</li>			
+					<li><a href="#">上传</a></li>
+				</ul>
+			</div>
+			<form name="frm" id="id" action="comics.php" method="get">
+				<input type="hidden" name="comic" id="fileId" >
+			</form>
+			<form name="frm_del" id="id_del" action="comics.php" method="post">
+				<input type="hidden" name="comic_del" id="fileId_del" >
+			</form>
+			
+			<script type="text/javascript">
+				function btn(e){
+					document.getElementById("fileId").value = e;
+					var frm = document.getElementById("id");
+					frm.submit();
+				}
+				
+				function del(e){
+					document.getElementById("fileId_del").value = e;
+					var frm = document.getElementById("id_del");
+					frm.submit();
+				}
+			</script>
+		</div>
+		<a href='#'><div class='img'><img src="08.png"></div></a>	</div>
+	<p>
+		改革开放时期	</p>
+</div>
+	
+<div class="card">
+	<div class="pic">
+		<div class="del">
+			<div class="menu">
+				<ul>
+					<li onclick='btn("9")'>阅读</li>			
+					<li onclick='del("9")'>删除</li>			
+					<li><a href="#">上传</a></li>
+				</ul>
+			</div>
+			<form name="frm" id="id" action="comics.php" method="get">
+				<input type="hidden" name="comic" id="fileId" >
+			</form>
+			<form name="frm_del" id="id_del" action="comics.php" method="post">
+				<input type="hidden" name="comic_del" id="fileId_del" >
+			</form>
+			
+			<script type="text/javascript">
+				function btn(e){
+					document.getElementById("fileId").value = e;
+					var frm = document.getElementById("id");
+					frm.submit();
+				}
+				
+				function del(e){
+					document.getElementById("fileId_del").value = e;
+					var frm = document.getElementById("id_del");
+					frm.submit();
+				}
+			</script>
+		</div>
+		<a href='#'><div class='img'><img src="09.png"></div></a>	</div>
+	<p>
+		中国特色社会主义现代化	</p>
+</div>
+	
+	</div>
+</body>
+</html>
